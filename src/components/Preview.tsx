@@ -16,7 +16,7 @@ function Preview(props: PreviewTypes): JSX.Element {
     <div>
       <Link to={href}>{title}</Link>
       <span>{subtitle}</span>
-      <img src={imageSrc} alt={imageAlt} />
+      <img src={imageSrc} alt={imageAlt} style={{ maxWidth: 400}} />
     </div>
   )
 }

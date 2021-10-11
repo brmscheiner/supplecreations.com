@@ -1,5 +1,9 @@
 import { MediaElement } from '../types';
-import coastlines from './articles/coastlines';
+import coastlines from './articles/coastlines/coastlines';
+import coastlinesHero from './articles/coastlines/coastlines_landscape.jpg'
+import squigglesHero from './articles/squirrels/squirrels_landscape.jpg';
+import cuba from './articles/cuba/cuba';
+import cubaHero from './articles/cuba/cuba_landscape.jpg';
 
 interface ArticleTypes {
   title: string,
@@ -13,19 +17,27 @@ interface ArticleTypes {
 const articleData: ArticleTypes[] = [
   {
     title: 'Coastlines',
-    subtitle: 'Created today',
+    subtitle: 'Looking closely at the Oregon coast',
     href: 'coastlines',
-    heroImageSrc: 'hiii',
-    heroImageAlt: 'suuup', 
+    heroImageSrc: coastlinesHero,
+    heroImageAlt: 'Black and white sand',
     content: coastlines,
   },
   {
-    title: 'New site',
-    subtitle: 'Created today',
-    href: 'newstuff',
-    heroImageSrc: 'hiii',
-    heroImageAlt: 'suuup', 
+    title: 'Fostering squirrels',
+    subtitle: 'Living with Penelope and Squiggles',
+    href: 'squiggles',
+    heroImageSrc: squigglesHero,
+    heroImageAlt: "Squirrel perched on a man's hand",
     content: coastlines,
+  },
+  {
+    title: 'Support for the Cuban people',
+    subtitle: 'Yes, you can go to Cuba. If you know the magic words...',
+    href: 'cuba',
+    heroImageSrc: cubaHero,
+    heroImageAlt: 'suuup', 
+    content: cuba,
   },
 ]
 

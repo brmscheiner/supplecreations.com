@@ -10,7 +10,11 @@ import './App.css';
 import articleData from './constants/articleData';
 import ScrollHelper from './components/ScrollHelper';
 import MultiMedia from './components/MultiMedia';
-import Home from './components/Home';
+import Header from './components/Header';
+import Page from './components/Page';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import FourOhFour from './pages/FourOhFour';
 
 function App(): JSX.Element {
   // const RouterComponent = __DEV__ ? BrowserRouter : HashRouter;
@@ -18,21 +22,28 @@ function App(): JSX.Element {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <RouterComponent basename="/">
-          <ScrollHelper />
-          <Switch>
-            {articleData.map(article => (
-              <Route key={article.title} path={`/articles/${article.href}`}>
+      <RouterComponent basename="/">
+        <Header />
+        <ScrollHelper />
+        <Switch>
+          {articleData.map(article => (
+            <Route key={article.title} path={`/articles/${article.href}`}>
+              <Page title={article.title}>
                 <MultiMedia data={article.content} />
-              </Route>
-            ))}
-            <Route path="/">
-              <Home />
+              </Page>
             </Route>
-          </Switch>
-        </RouterComponent>
-      </header>
+          ))}
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route>
+            <FourOhFour />
+          </Route>
+        </Switch>
+      </RouterComponent>
     </div>
   );
 }

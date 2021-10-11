@@ -9,7 +9,7 @@ function MultiMedia(props: MultiMediaTypes): JSX.Element {
   const { data } = props;
 
   return (
-    <div>
+    <div style={{ width: 500, display: 'flex', flexDirection: 'column', margin: '0 auto' }}>
       {data.map(datum => {
         if (typeof datum === 'string') {
           return <span key={datum}>{datum}</span>;
