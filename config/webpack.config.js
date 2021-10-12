@@ -378,14 +378,21 @@ module.exports = function (webpackEnv) {
                 name: 'static/media/[name].[hash:8].[ext]',
               },
             },
-            // "url" loader works like "file" loader except that it embeds assets
-            // smaller than specified limit in bytes as data URLs to avoid requests.
-            // A missing `test` is equivalent to a match.
+            // emit small images as URIs with dimensions 
             {
               test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-              loader: require.resolve('url-loader'),
+              loader: require.resolve('sizeof-loader'),
               options: {
                 limit: imageInlineSizeLimit,
+                name: 'static/media/[name].[hash:8].[ext]',
+              },
+            },
+            // emit any images larger than "imageInlineSizeLimit" as files
+            {
+              test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+              loader: require.resolve('sizeof-loader'),
+              options: {
+                useFileLoader: true,
                 name: 'static/media/[name].[hash:8].[ext]',
               },
             },

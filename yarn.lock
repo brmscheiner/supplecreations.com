@@ -5526,7 +5526,7 @@
   dependencies:
     "flat-cache" "^3.0.4"
 
-"file-loader@*", "file-loader@6.1.1":
+"file-loader@*", "file-loader@^6.0.0", "file-loader@6.1.1":
   "integrity" "sha512-Klt8C4BjWSXYQAfhpYYkG4qHNTna4toMHEbWrI5IuVoxbU6uiDKeKAP99R8mmbJi3lvewn/jQBOgU4+NS3tDQw=="
   "resolved" "https://registry.yarnpkg.com/file-loader/-/file-loader-6.1.1.tgz"
   "version" "6.1.1"
@@ -6315,6 +6315,13 @@
   "integrity" "sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw=="
   "resolved" "https://registry.yarnpkg.com/ignore/-/ignore-5.1.8.tgz"
   "version" "5.1.8"
+
+"image-size@^0.8.3":
+  "integrity" "sha512-SMtq1AJ+aqHB45c3FsB4ERK0UCiA2d3H1uq8s+8T0Pf8A3W4teyBQyaFaktH6xvZqh+npwlKU7i4fJo0r7TYTg=="
+  "resolved" "https://registry.npmjs.org/image-size/-/image-size-0.8.3.tgz"
+  "version" "0.8.3"
+  dependencies:
+    "queue" "6.0.1"
 
 "immer@8.0.1":
   "integrity" "sha512-aqXhGP7//Gui2+UrEtvxZxSquQVXTpZ7KDxfCcKAF3Vysvw0CViVaW9RZ1j1xlIYqaaaipBoqdqeibkc18PNvA=="
@@ -9741,6 +9748,13 @@
   "resolved" "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.2.tgz"
   "version" "1.2.2"
 
+"queue@6.0.1":
+  "integrity" "sha512-AJBQabRCCNr9ANq8v77RJEv73DPbn55cdTb+Giq4X0AVnNVZvMHlYp7XlQiN+1npCZj1DuSmaA2hYVUUDgxFDg=="
+  "resolved" "https://registry.npmjs.org/queue/-/queue-6.0.1.tgz"
+  "version" "6.0.1"
+  dependencies:
+    "inherits" "~2.0.3"
+
 "raf@^3.4.1":
   "integrity" "sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA=="
   "resolved" "https://registry.yarnpkg.com/raf/-/raf-3.4.1.tgz"
@@ -10764,6 +10778,16 @@
   "integrity" "sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg=="
   "resolved" "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz"
   "version" "1.0.5"
+
+"sizeof-loader@^2.0.0":
+  "integrity" "sha512-k+1z/6hHNcQcm/kUgMykOL5SvMrA4x2lY65a5w1KrgxY6YLwQUEaERmFSIUmcfLiZGGWX3867DwR4GFMIrSwow=="
+  "resolved" "https://registry.npmjs.org/sizeof-loader/-/sizeof-loader-2.0.0.tgz"
+  "version" "2.0.0"
+  dependencies:
+    "file-loader" "^6.0.0"
+    "image-size" "^0.8.3"
+    "loader-utils" "^2.0.0"
+    "url-loader" "^4.1.0"
 
 "slash@^3.0.0":
   "integrity" "sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q=="
@@ -11800,7 +11824,7 @@
   "resolved" "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz"
   "version" "0.1.0"
 
-"url-loader@4.1.1":
+"url-loader@^4.1.0", "url-loader@4.1.1":
   "integrity" "sha512-3BTV812+AVHHOJQO8O5MkWgZ5aosP7GnROJwvzLS9hWDj00lZ6Z0wNak423Lp9PBZN05N+Jk/N5Si8jRAlGyWA=="
   "resolved" "https://registry.yarnpkg.com/url-loader/-/url-loader-4.1.1.tgz"
   "version" "4.1.1"
@@ -12077,7 +12101,7 @@
     "source-list-map" "^2.0.0"
     "source-map" "~0.6.1"
 
-"webpack@^4.0.0", "webpack@^4.0.0 || ^5.0.0", "webpack@^4.27.0 || ^5.0.0", "webpack@^4.36.0 || ^5.0.0", "webpack@^4.4.0 || ^5.0.0", "webpack@>=2", "webpack@>=4.43.0 <6.0.0", "webpack@2 || 3 || 4", "webpack@4.44.2":
+"webpack@^2.0.0 || ^3.0.0 || ^4.0.0", "webpack@^4.0.0", "webpack@^4.0.0 || ^5.0.0", "webpack@^4.27.0 || ^5.0.0", "webpack@^4.36.0 || ^5.0.0", "webpack@^4.4.0 || ^5.0.0", "webpack@>=2", "webpack@>=4.43.0 <6.0.0", "webpack@2 || 3 || 4", "webpack@4.44.2":
   "integrity" "sha512-6KJVGlCxYdISyurpQ0IPTklv+DULv05rs2hseIXer6D7KrUicRDLFb4IUM1S6LUAKypPM/nSiVSuv8jHu1m3/Q=="
   "resolved" "https://registry.yarnpkg.com/webpack/-/webpack-4.44.2.tgz"
   "version" "4.44.2"

@@ -13,7 +13,7 @@ function Home(): JSX.Element {
         <Preview
           key={article.title}
           title={article.title}
-          subtitle={article.title}
+          subtitle={article.subtitle}
           imageSrc={article.heroImageSrc}
           imageAlt={article.heroImageAlt}
           href={`/articles/${article.href}`}

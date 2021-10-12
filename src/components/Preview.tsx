@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LoadableImage from './LoadableImage';
 
 interface PreviewTypes {
   title: string;
@@ -9,14 +10,16 @@ interface PreviewTypes {
   href: string,
 }
 
+const columnWidth = 500;
+
 function Preview(props: PreviewTypes): JSX.Element {
   const { title, subtitle, imageSrc, imageAlt, href } = props;
 
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', margin: '0 auto', maxWidth: columnWidth }}>
       <Link to={href}>{title}</Link>
       <span>{subtitle}</span>
-      <img src={imageSrc} alt={imageAlt} style={{ maxWidth: 400}} />
+      <LoadableImage src={imageSrc} alt={imageAlt} width={columnWidth} />
     </div>
   )
 }
