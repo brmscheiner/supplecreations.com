@@ -1,6 +1,16 @@
-// After I started using sizeof-loader, typescript started 
-// getting confused by width and height properties on imported 
-// images. This was a quick solution...
+import { SizeofLoaderObject } from './';
 
-declare module "*.jpg";
-declare module "*.png";
+declare module "*.jpeg" {
+  const value: SizeofLoaderObject;
+  export default value;
+}
+
+declare module "*.jpg" {
+  const value: SizeofLoaderObject;
+  export default value;
+}
+
+declare module "*.png" {
+  const value: SizeofLoaderObject;
+  export default value;
+}

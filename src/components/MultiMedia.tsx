@@ -1,4 +1,5 @@
 import React from 'react';
+import { get } from 'lodash-es';
 import { MediaElement } from '../types';
 import LoadableImage from '../components/LoadableImage';
 
@@ -14,10 +15,12 @@ function MultiMedia(props: MultiMediaTypes): JSX.Element {
   return (
     <div style={{ width: columnWidth, display: 'flex', flexDirection: 'column', margin: '0 auto' }}>
       {data.map(datum => {
+        console.log(datum);
+        if (!datum) return null;
         if (typeof datum === 'string') {
           return <span key={datum}>{datum}</span>;
         } else {
-          return <LoadableImage key={datum.imageSrc} width={columnWidth} src={datum.imageSrc} alt={datum.imageAlt} />
+          return <LoadableImage key={get(datum, ['image', 'src'])} width={columnWidth} imageObject={get(datum, 'image', '')} alt={datum.alt} />
         }
       })}
     </div>

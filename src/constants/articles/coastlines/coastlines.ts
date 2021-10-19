@@ -1,3 +1,4 @@
+import mediaTypes from '../../mediaTypes';
 import image1 from './1.jpg';
 import image2 from './2.jpg';
 import image3 from './3.jpg';
@@ -10,46 +11,59 @@ import image9 from './9.jpg';
 import image10 from './10.jpg';
 
 const coastlines = [
-  'I love spending time on the coast observing all of the different textures formed in the sand. Erosion comes from so many different forces - lapping waves, harsh wind, heavy rain, tributaries flowing out to sea... Often the most interesting patterns are formed where these forces intersect. I used high-contrast, black and white filters to magnify the patterns I observed.',
   {
-    imageSrc: image1,
-    imageAlt: 'Black and white sand',
+    mediaType: mediaTypes.text,
+    text: 'I love spending time on the coast observing all of the different textures formed in the sand. Erosion comes from so many different forces - lapping waves, harsh wind, heavy rain, tributaries flowing out to sea... Often the most interesting patterns are formed where these forces intersect. I used high-contrast, black and white filters to magnify the patterns I observed.',
   },
   {
-    imageSrc: image2,
-    imageAlt: 'Black and white sand',
+    mediaType: mediaTypes.image,
+    image: image1,
+    alt: 'Black and white sand',
   },
   {
-    imageSrc: image3,
-    imageAlt: 'Black and white sand',
+    mediaType: mediaTypes.image,
+    image: image2,
+    alt: 'Black and white sand',
   },
   {
-    imageSrc: image4,
-    imageAlt: 'Black and white sand',
+    mediaType: mediaTypes.image,
+    image: image3,
+    alt: 'Black and white sand',
   },
   {
-    imageSrc: image5,
-    imageAlt: 'Black and white sand',
+    mediaType: mediaTypes.image,
+    image: image4,
+    alt: 'Black and white sand',
   },
   {
-    imageSrc: image6,
-    imageAlt: 'Black and white sand',
+    mediaType: mediaTypes.image,
+    image: image5,
+    alt: 'Black and white sand',
   },
   {
-    imageSrc: image7,
-    imageAlt: 'Black and white sand',
+    mediaType: mediaTypes.image,
+    image: image6,
+    alt: 'Black and white sand',
   },
   {
-    imageSrc: image8,
-    imageAlt: 'Black and white sand',
+    mediaType: mediaTypes.image,
+    image: image7,
+    alt: 'Black and white sand',
   },
   {
-    imageSrc: image9,
-    imageAlt: 'Black and white sand',
+    mediaType: mediaTypes.image,
+    image: image8,
+    alt: 'Black and white sand',
   },
   {
-    imageSrc: image10,
-    imageAlt: 'Black and white sand',
+    mediaType: mediaTypes.image,
+    image: image9,
+    alt: 'Black and white sand',
+  },
+  {
+    mediaType: mediaTypes.image,
+    image: image10,
+    alt: 'Black and white sand',
   },
 ];
 
