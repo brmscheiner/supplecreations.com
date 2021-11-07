@@ -1,6 +1,7 @@
 .App {
   min-height: 100vh;
   background-color: #7b9ac1;
+  font-family: 'GFS Neohellenic', sans-serif;
 }
 
 .App-logo {
@@ -12,11 +13,22 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.loading-gradient {
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #404040 8%, #686868 38%, #404040 54%);
+  background-size: 1000px 640px;
+}
+
+@keyframes shimmer{
+  0%{
+      background-position: -468px 0
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+      background-position: 468px 0
   }
 }

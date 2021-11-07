@@ -7,10 +7,11 @@ interface LoadableImageProps {
   width?: number;
   height?: number;
   alt?: string;
+  style?: React.CSSProperties;
 }
 
 function LoadableImage(props: LoadableImageProps): JSX.Element {
-  const { width, height, alt, imageObject, ...rest } = props;
+  const { width, height, alt, style = {}, imageObject, ...rest } = props;
 
   const [loading, setLoading] = useState(true);
 
@@ -31,20 +32,19 @@ function LoadableImage(props: LoadableImageProps): JSX.Element {
   }
 
 
-  return <div style={{ width: renderWidth, height: renderHeight, position: 'relative', background: 'rbga(0, 0, 0, 0.14)' }}>
+  return <div style={{ width: renderWidth, height: renderHeight, ...style }}>
     {loading && (
       <div
+        className="loading-gradient"
         style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          width: 300,
-          height: 300,
-          backgroundColor: 'red',
+          width: renderWidth,
+          height: renderHeight,
+          display: 'block',
+          ...style,
         }}
       />
     )}
-    <img alt={alt} src={get(imageObject, 'src', '')} onLoad={() => setLoading(false)} style={{ width: '100%'}} {...rest} />
+    <img alt={alt} src={get(imageObject, 'src', '')} onLoad={() => setLoading(false)} style={{ width: '100%', display: 'block' }} {...rest} />
   </div>
 }
 

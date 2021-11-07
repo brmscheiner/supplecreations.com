@@ -20,7 +20,7 @@ function MultiMedia(props: MultiMediaTypes): JSX.Element {
         if (typeof datum === 'string') {
           return <span key={datum}>{datum}</span>;
         } else {
-          return <LoadableImage key={get(datum, ['image', 'src'])} width={columnWidth} imageObject={get(datum, 'image', '')} alt={datum.alt} />
+          return <LoadableImage style={{ marginBottom: 40 }} key={get(datum, ['image', 'src'])} width={columnWidth} imageObject={get(datum, 'image', '')} alt={datum.alt} />
         }
       })}
     </div>
