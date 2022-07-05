@@ -6,21 +6,22 @@ import { SizeofLoaderObject } from '../types';
 interface PreviewTypes {
   title: string;
   subtitle: string;
-  imageObject: SizeofLoaderObject;
-  imageAlt: string;
+  date: string;
   href: string,
 }
 
 const columnWidth = 500;
 
 function Preview(props: PreviewTypes): JSX.Element {
-  const { title, subtitle, imageObject, imageAlt, href } = props;
+  const { title, subtitle, date, href } = props;
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', margin: '0 auto', maxWidth: columnWidth }}>
-      <Link to={href}>{title}</Link>
-      <span>{subtitle}</span>
-      <LoadableImage imageObject={imageObject} alt={imageAlt} width={columnWidth} />
+    <div style={{ display: 'flex', flexDirection: 'column', margin: '0 auto', maxWidth: columnWidth, marginBottom: 40 }}>
+      <span className="title">{title}</span>
+      <span className="subtitle" style={{ marginTop: -8 }}>{date}</span>
+      <span style={{ marginTop: 4 }}>{subtitle}</span>
+      <Link to={href}>View gallery</Link>
+      {/* <LoadableImage imageObject={imageObject} alt={imageAlt} width={columnWidth} /> */}
     </div>
   )
 }

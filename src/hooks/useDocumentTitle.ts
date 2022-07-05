@@ -4,7 +4,7 @@ export default function(
   message: string,
   appendSitename: boolean,
 ): void {
-  const siteName = 'Supple Creations';
+  const siteName = 'subculturecreations.com';
   useEffect(
     () => {
       if (appendSitename && siteName) {

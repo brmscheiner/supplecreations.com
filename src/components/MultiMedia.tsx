@@ -1,26 +1,24 @@
 import React from 'react';
 import { get } from 'lodash-es';
 import { MediaElement } from '../types';
+import mediaTypes from '../constants/mediaTypes';
 import LoadableImage from '../components/LoadableImage';
 
 interface MultiMediaTypes {
   data: MediaElement[];
 }
 
-const columnWidth = 500;
-
 function MultiMedia(props: MultiMediaTypes): JSX.Element {
   const { data } = props;
 
   return (
-    <div style={{ width: columnWidth, display: 'flex', flexDirection: 'column', margin: '0 auto' }}>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
       {data.map(datum => {
-        console.log(datum);
         if (!datum) return null;
-        if (typeof datum === 'string') {
-          return <span key={datum}>{datum}</span>;
+        if (datum.mediaType === mediaTypes.text) {
+          return <p key={datum.text}>{datum.text}</p>;
         } else {
-          return <LoadableImage style={{ marginBottom: 40 }} key={get(datum, ['image', 'src'])} width={columnWidth} imageObject={get(datum, 'image', '')} alt={datum.alt} />
+          return <LoadableImage width={500} key={get(datum, ['image', 'src'])} imageObject={get(datum, 'image', '')} alt={datum.alt} />
         }
       })}
     </div>

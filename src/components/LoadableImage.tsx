@@ -31,7 +31,6 @@ function LoadableImage(props: LoadableImageProps): JSX.Element {
     renderHeight = get(imageObject, 'height', undefined);
   }
 
-
   return <div style={{ width: renderWidth, height: renderHeight, ...style }}>
     {loading && (
       <div

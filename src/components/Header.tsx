@@ -1,12 +1,13 @@
 import React from 'react';
+import Logo from '../assets/logo.svg';
 import { Link } from 'react-router-dom';
 
 function Header(): JSX.Element {
   return (
-    <header style={{ background: 'black', position: 'fixed', color: 'white', width: 200 }}>
-      <Link to="/">Home</Link>
-      <Link to="/wow">Wow</Link>
-      <Link to="/contact">Contact</Link>
+    <header style={{ position: 'absolute', display: 'flex', flexDirection: 'column' }}>
+      <Link to="/"><img src={Logo} style={{ width: 240, height: 240, marginLeft: 20 }} /></Link>
+      <Link className="navLink" style={{ marginLeft: 100 }} to="/">HOME</Link>
+      <Link className="navLink" style={{ marginLeft: 100 }} to="/about">CONTACT</Link>
     </header>
   )
 }

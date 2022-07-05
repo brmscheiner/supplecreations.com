@@ -13,7 +13,7 @@ import MultiMedia from './components/MultiMedia';
 import Header from './components/Header';
 import Page from './components/Page';
 import Home from './pages/Home';
-import Contact from './pages/Contact';
+import About from './pages/About';
 import FourOhFour from './pages/FourOhFour';
 
 function App(): JSX.Element {
@@ -22,28 +22,28 @@ function App(): JSX.Element {
 
   return (
     <div className="App">
-      <RouterComponent basename="/">
-        <Header />
-        <ScrollHelper />
-        <Switch>
-          {articleData.map(article => (
-            <Route key={article.title} path={`/articles/${article.href}`}>
-              <Page title={article.title}>
-                <MultiMedia data={article.content} />
-              </Page>
+        <RouterComponent basename="/">
+          <Header />
+          <ScrollHelper />
+          <Switch>
+            {articleData.map(article => (
+              <Route key={article.title} path={`/articles/${article.href}`}>
+                <Page title={article.title}>
+                  <MultiMedia data={article.content} />
+                </Page>
+              </Route>
+            ))}
+            <Route exact path="/">
+              <Home />
             </Route>
-          ))}
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route>
-            <FourOhFour />
-          </Route>
-        </Switch>
-      </RouterComponent>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route>
+              <FourOhFour />
+            </Route>
+          </Switch>
+        </RouterComponent>
     </div>
   );
 }

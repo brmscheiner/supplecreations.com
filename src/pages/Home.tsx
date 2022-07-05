@@ -14,8 +14,7 @@ function Home(): JSX.Element {
           key={article.title}
           title={article.title}
           subtitle={article.subtitle}
-          imageObject={article.heroImage}
-          imageAlt={article.heroImageAlt}
+          date={article.date}
           href={`/articles/${article.href}`}
         />
       ))}
