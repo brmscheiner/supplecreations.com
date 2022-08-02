@@ -1,44 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&family=Nunito+Sans:wght@800&display=swap');
-.App {
-  margin-top: 24px;
+body {
   min-height: 100vh;
   background: white;
-    font-family: 'Heebo', sans-serif;
-  }
-  
-  .main {
-    margin: 40px 0 100px 320px;
-    max-width: 600px;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.navLink {
-  color: unset;
-  text-decoration: none;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Heebo', sans-serif;
 }
 
 p {
   margin: 0.5em 0;
 }
 
-.title {
-  font-weight: 700;
-  font-size: 1.7em;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 1em;
-}
 .loading-gradient {
   animation-duration: 1.8s;
   animation-fill-mode: forwards;

@@ -22,7 +22,7 @@ function App(): JSX.Element {
   const RouterComponent = BrowserRouter;
 
   return (
-    <div className="App">
+    <div style={{ marginTop: 24 }}>
         <RouterComponent basename="/">
           <Header />
           <ScrollHelper />
