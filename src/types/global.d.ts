@@ -14,3 +14,9 @@ declare module "*.png" {
   const value: SizeofLoaderObject;
   export default value;
 }
+
+// for some reason this doesn't work?! had to save in raw-loader.d.ts
+declare module "*.md" {
+  const content: string;
+  export default content;
+}

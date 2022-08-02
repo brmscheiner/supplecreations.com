@@ -12,9 +12,10 @@ import ScrollHelper from './components/ScrollHelper';
 import MultiMedia from './components/MultiMedia';
 import Header from './components/Header';
 import Page from './components/Page';
-import Home from './pages/Home';
-import About from './pages/About';
-import FourOhFour from './pages/FourOhFour';
+import Home from './pages/home/Home';
+import About from './pages/about/About';
+import WorkHistory from './pages/workHistory/WorkHistory';
+import FourOhFour from './pages/fourOhFour/FourOhFour';
 
 function App(): JSX.Element {
   // const RouterComponent = __DEV__ ? BrowserRouter : HashRouter;
@@ -35,6 +36,9 @@ function App(): JSX.Element {
             ))}
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/work-history">
+              <WorkHistory />
             </Route>
             <Route path="/about">
               <About />

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import articleData from '../constants/articleData';
-import useDocumentTitle from '../hooks/useDocumentTitle';
-import Preview from '../components/Preview';
+import articleData from '../../constants/articleData';
+import useDocumentTitle from '../../hooks/useDocumentTitle';
+import Preview from '../../components/Preview';
 
 function Home(): JSX.Element {
   useDocumentTitle('Home', true);

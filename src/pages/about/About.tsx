@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Page from '../components/Page';
-import LoadableImage from '../components/LoadableImage';
-import ben from '../assets/ben.jpeg';
+import Page from '../../components/Page';
+import LoadableImage from '../../components/LoadableImage';
+import ben from '../../assets/ben.jpeg';
 
 function About(): JSX.Element {
   return <Page title="About">
