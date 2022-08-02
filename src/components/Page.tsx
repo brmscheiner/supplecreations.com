@@ -11,7 +11,7 @@ interface PageProps {
 function Page(props: PageProps): JSX.Element {
   const { children, title, showTitle = true } = props;
   useDocumentTitle(title, true);
-  return <div style={{ margin: '40px 16px 100px 320px', maxWidth: 600 }}>
+  return <div style={{ margin: '40px 16px 100px 16px', maxWidth: 600 }}>
     {showTitle && <Title>{title}</Title>}
     {children}
   </div>;

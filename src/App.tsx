@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import './App.css';
+import useIsNarrowScreen from './hooks/useIsNarrowScreen';
 import articleData from './constants/articleData';
 import ScrollHelper from './components/ScrollHelper';
 import MultiMedia from './components/MultiMedia';
@@ -21,10 +22,12 @@ function App(): JSX.Element {
   // const RouterComponent = __DEV__ ? BrowserRouter : HashRouter;
   const RouterComponent = BrowserRouter;
 
+  const isNarrowScreen = useIsNarrowScreen();
+  console.log(isNarrowScreen);
   return (
-    <div style={{ marginTop: 24 }}>
+    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         <RouterComponent basename="/">
-          <Header />
+          <Header isNarrowScreen={isNarrowScreen} />
           <ScrollHelper />
           <Switch>
             {articleData.map(article => (
